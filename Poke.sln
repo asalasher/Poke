@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33717.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poke.DistributedSystems", "Poke.DistributedSystems\Poke.DistributedSystems.csproj", "{A2860561-D0FD-4065-AF13-972A345D6AAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poke.Repository", "Poke.Repository\Poke.Repository.csproj", "{719160D6-FD9A-462F-B8D3-B3CE1411A70D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2860561-D0FD-4065-AF13-972A345D6AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2860561-D0FD-4065-AF13-972A345D6AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2860561-D0FD-4065-AF13-972A345D6AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2860561-D0FD-4065-AF13-972A345D6AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{719160D6-FD9A-462F-B8D3-B3CE1411A70D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{719160D6-FD9A-462F-B8D3-B3CE1411A70D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{719160D6-FD9A-462F-B8D3-B3CE1411A70D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{719160D6-FD9A-462F-B8D3-B3CE1411A70D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E16E54A-D82C-4F34-9394-2ED8B78A9416}
+	EndGlobalSection
+EndGlobal
