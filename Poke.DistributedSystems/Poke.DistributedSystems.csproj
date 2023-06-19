@@ -171,13 +171,17 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PK.Domain\PK.Domain.csproj">
+      <Project>{0ea087ad-b341-4412-bb2a-8d8dee50411d}</Project>
+      <Name>PK.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Poke.Logging\Poke.Logging.csproj">
       <Project>{3f23cf39-ed2e-44ac-8199-bb22d0da5304}</Project>
       <Name>Poke.Logging</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Poke.Repository\Poke.Repository.csproj">
+    <ProjectReference Include="..\Poke.Repository\Poke.DataAccess.csproj">
       <Project>{719160d6-fd9a-462f-b8d3-b3ce1411a70d}</Project>
-      <Name>Poke.Repository</Name>
+      <Name>Poke.DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

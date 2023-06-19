@@ -1,6 +1,6 @@
 ﻿namespace Poke.Repository.DataEntities
 {
-    public class MoveStats
+    public class MoveStatsDataEntity
     {
         public int Id { get; set; }
         public string Name { get; set; }

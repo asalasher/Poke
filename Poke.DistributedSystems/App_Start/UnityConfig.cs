@@ -1,7 +1,6 @@
+using PK.Domain.Services;
 using Poke.Logging;
 using Poke.Repository;
-using System;
-using System.IO;
 using System.Web.Http;
 using Unity;
 using Unity.Microsoft.Logging;
@@ -11,7 +10,7 @@ namespace Poke.DistributedSystems
 {
     public static class UnityConfig
     {
-        private static readonly string _logFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Logs", "SerilogPoke.log");
+        //private static readonly string _logFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Logs", "SerilogPoke.log");
 
         public static void RegisterComponents()
         {
@@ -31,6 +30,8 @@ namespace Poke.DistributedSystems
 
             // register all your components with the container here
             // it is NOT necessary to register your controllers
+            container.RegisterType<IMoveServices, MoveServices>();
+            container.RegisterType<ITypesRepository, TypesRepository>();
             container.RegisterType<IMovesRepository, MovesRepository>();
 
             // e.g. container.RegisterType<ITestService, TestService>();

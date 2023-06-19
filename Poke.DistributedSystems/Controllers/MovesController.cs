@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-using Poke.Repository;
+using PK.Domain.Services;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -9,12 +9,12 @@ namespace Poke.DistributedSystems.Controllers
 {
     public class MovesController : ApiController
     {
-        private readonly IMovesRepository _movesRepository;
+        private readonly IMoveServices _movesServices;
         private readonly ILogger _logger;
 
-        public MovesController(IMovesRepository movesRepository, ILogger log)
+        public MovesController(IMoveServices movesServices, ILogger log)
         {
-            _movesRepository = movesRepository;
+            _movesServices = movesServices;
             _logger = log;
         }
 
@@ -23,18 +23,19 @@ namespace Poke.DistributedSystems.Controllers
         {
             try
             {
-                _logger.LogCritical("Critical message");
-                _logger.LogError("Error message");
-                _logger.LogWarning("Warning message");
-                _logger.LogInformation("Information message");
-                _logger.LogDebug("Debug message");
-                _logger.LogTrace("Trace message");
+                //_logger.LogCritical("Critical message");
+                //_logger.LogError("Error message");
+                //_logger.LogWarning("Warning message");
+                //_logger.LogInformation("Information message");
+                //_logger.LogDebug("Debug message");
+                //_logger.LogTrace("Trace message");
 
-                List<string> names = await _movesRepository.GetMoveNames(10);
+                List<string> names = await _movesServices.GetSpanishMoveNames();
                 return Ok(names);
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 return BadRequest(ex.Message);
             }
         }

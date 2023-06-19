@@ -1,6 +1,6 @@
 ﻿namespace Poke.Repository.DataEntities
 {
-    public class TypeFireStats
+    public class TypeStatsDataEntity
     {
         public Move[] Moves { get; set; }
         public string Name { get; set; }
