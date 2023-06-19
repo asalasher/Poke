@@ -6,6 +6,6 @@ namespace Poke.Repository
 {
     public interface ITypesRepository
     {
-        Task<List<Move>> GetMovesFromType(string type = "fire");
+        Task<List<Move>> GetMovesFromType(string pokemonType, int numberOfMoves);
     }
 }

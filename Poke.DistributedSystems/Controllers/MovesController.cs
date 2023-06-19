@@ -19,8 +19,12 @@ namespace Poke.DistributedSystems.Controllers
         }
 
         // GET: api/Moves
-        public async Task<IHttpActionResult> Get()
+        public async Task<IHttpActionResult> Get(string pokemonType = "fire", string language = "es", int number = 10)
         {
+            //string pokemonType = Request.GetQueryNameValuePairs().FirstOrDefault(x => x.Key == "type").Value;
+            //string language = Request.GetQueryNameValuePairs().FirstOrDefault(x => x.Key == "language").Value;
+            //string numberOfMoves = Request.GetQueryNameValuePairs().FirstOrDefault(x => x.Key == "number").Value;
+
             try
             {
                 //_logger.LogCritical("Critical message");
@@ -30,7 +34,9 @@ namespace Poke.DistributedSystems.Controllers
                 //_logger.LogDebug("Debug message");
                 //_logger.LogTrace("Trace message");
 
-                List<string> names = await _movesServices.GetSpanishMoveNames();
+                //List<string> names = await _movesServices.GetTranslatedMoveNames();
+                List<string> names = await _movesServices.GetTranslatedMoveNames(number, language, pokemonType);
+
                 return Ok(names);
             }
             catch (Exception ex)

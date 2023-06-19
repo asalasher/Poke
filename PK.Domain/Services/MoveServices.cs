@@ -18,9 +18,9 @@ namespace PK.Domain.Services
             _typesRepository = typesRepository;
         }
 
-        public async Task<List<string>> GetSpanishMoveNames()
+        public async Task<List<string>> GetTranslatedMoveNames(int numberOfMoves = 10, string language = "es", string pokemonType = "fire")
         {
-            List<Move> typeMovesWithEnglishNames = await _typesRepository.GetMovesFromType();
+            List<Move> typeMovesWithEnglishNames = await _typesRepository.GetMovesFromType(pokemonType, numberOfMoves);
             List<string> listOfMovesNames = new List<string>();
 
             foreach (var move in typeMovesWithEnglishNames)

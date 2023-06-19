@@ -25,16 +25,16 @@ namespace Poke.Repository
             _logger = logger;
         }
 
-        public async Task<List<PK.Domain.Move>> GetMovesFromType(string type = "fire")
+        public async Task<List<PK.Domain.Move>> GetMovesFromType(string pokemonType, int numberOfMoves)
         {
             try
             {
-                string responseBody = await _httpClient.GetStringAsync(type);
+                string responseBody = await _httpClient.GetStringAsync(pokemonType);
                 TypeStatsDataEntity typeFireStats = JsonConvert.DeserializeObject<TypeStatsDataEntity>(responseBody);
 
                 var listOfMoves = new List<PK.Domain.Move>();
 
-                foreach (var move in typeFireStats.Moves.Take(10))
+                foreach (var move in typeFireStats.Moves.Take(numberOfMoves))
                 {
                     listOfMoves.Add(new PK.Domain.Move
                     {

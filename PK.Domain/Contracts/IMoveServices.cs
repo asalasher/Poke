@@ -5,6 +5,6 @@ namespace PK.Domain.Services
 {
     public interface IMoveServices
     {
-        Task<List<string>> GetSpanishMoveNames();
+        Task<List<string>> GetTranslatedMoveNames(int numberOfMoves = 10, string language = "es", string pokemonType = "fire");
     }
 }
