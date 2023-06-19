@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poke.DistributedSystems", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poke.Repository", "Poke.Repository\Poke.Repository.csproj", "{719160D6-FD9A-462F-B8D3-B3CE1411A70D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-DistributedSystems", "1-DistributedSystems", "{A0D7D2D1-D706-4844-8E92-3CFF738F296C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Infrastructure", "3-Infrastructure", "{24577AC4-2A17-4F67-AB88-98EC636995AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poke.Logging", "Poke.Logging\Poke.Logging.csproj", "{3F23CF39-ED2E-44AC-8199-BB22D0DA5304}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +27,18 @@ Global
 		{719160D6-FD9A-462F-B8D3-B3CE1411A70D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{719160D6-FD9A-462F-B8D3-B3CE1411A70D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{719160D6-FD9A-462F-B8D3-B3CE1411A70D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F23CF39-ED2E-44AC-8199-BB22D0DA5304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F23CF39-ED2E-44AC-8199-BB22D0DA5304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F23CF39-ED2E-44AC-8199-BB22D0DA5304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F23CF39-ED2E-44AC-8199-BB22D0DA5304}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A2860561-D0FD-4065-AF13-972A345D6AAB} = {A0D7D2D1-D706-4844-8E92-3CFF738F296C}
+		{719160D6-FD9A-462F-B8D3-B3CE1411A70D} = {24577AC4-2A17-4F67-AB88-98EC636995AE}
+		{3F23CF39-ED2E-44AC-8199-BB22D0DA5304} = {24577AC4-2A17-4F67-AB88-98EC636995AE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E16E54A-D82C-4F34-9394-2ED8B78A9416}
