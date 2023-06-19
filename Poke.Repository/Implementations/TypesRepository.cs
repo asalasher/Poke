@@ -25,11 +25,11 @@ namespace Poke.Repository
             _logger = logger;
         }
 
-        public async Task<List<PK.Domain.Move>> GetMovesFromType()
+        public async Task<List<PK.Domain.Move>> GetMovesFromType(string type = "fire")
         {
             try
             {
-                string responseBody = await _httpClient.GetStringAsync("fire");
+                string responseBody = await _httpClient.GetStringAsync(type);
                 TypeStatsDataEntity typeFireStats = JsonConvert.DeserializeObject<TypeStatsDataEntity>(responseBody);
 
                 var listOfMoves = new List<PK.Domain.Move>();

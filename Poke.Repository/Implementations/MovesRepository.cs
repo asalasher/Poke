@@ -32,9 +32,8 @@ namespace Poke.Repository
         // Above three lines can be replaced with new helper method below
         //string responseBody = await _httpClient.GetStringAsync("https://pokeapi.co/api/v2/type/fire");
 
-        public async Task<PK.Domain.Move> GetTranslatedMove(string id)
+        public async Task<PK.Domain.Move> GetTranslatedMove(string id, string languageTranslation = "es")
         {
-            string languageTranslation = "es";
             try
             {
                 string responseBody = await _httpClient.GetStringAsync(id);

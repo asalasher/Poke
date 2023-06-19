@@ -5,6 +5,6 @@ namespace Poke.Repository
 {
     public interface IMovesRepository
     {
-        Task<Move> GetTranslatedMove(string id);
+        Task<Move> GetTranslatedMove(string id, string languageTranslation = "es");
     }
 }
