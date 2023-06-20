@@ -7,6 +7,7 @@ using System.Web.Http;
 
 namespace Poke.DistributedSystems.Controllers
 {
+    [RoutePrefix("api")]
     public class MovesController : ApiController
     {
         private readonly IMoveServices _movesServices;
@@ -19,6 +20,8 @@ namespace Poke.DistributedSystems.Controllers
         }
 
         // GET: api/Moves
+        [HttpGet]
+        [Route("moves")]
         public async Task<IHttpActionResult> Get(string pokemonType = "fire", string language = "es", int number = 10)
         {
             //string pokemonType = Request.GetQueryNameValuePairs().FirstOrDefault(x => x.Key == "type").Value;
